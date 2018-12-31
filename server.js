@@ -1,6 +1,6 @@
 const express = require('express');
 const hbs = require('hbs');
-
+const port = process.env.PORT || 8080;
 let app = express();
 
 hbs.registerPartials(__dirname+'/views/partials')
@@ -39,6 +39,6 @@ app.get('/bad', (req, res) => {
     })
 });
 
-app.listen(8080, () => {
+app.listen(port, () => {
     console.log('THE SERVER IS LIVE')
 })
